@@ -1,5 +1,25 @@
 from core.settings.base import *
 
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [BASE_DIR / 'templates/'],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -12,6 +32,6 @@ DATABASES = {
 }
 
 DEBUG = False
-STATICFILES_DIRS = ["theme/static/"]
+STATICFILES_DIRS = [BASE_DIR / "theme/static/"]
 MEDIA_URL = '/media/'
-MEDIA_ROOT  =  'media'
+MEDIA_ROOT  =  BASE_DIR / 'media'

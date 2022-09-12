@@ -1,4 +1,4 @@
 env
 *\__pycache__
-db.sqlite3
-theme/node_modules
+*\db.sqlite3
+*\node_modules
